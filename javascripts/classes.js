@@ -93,6 +93,7 @@ Gauntlet.GuildHall.Shaman.prototype = new Gauntlet.GuildHall.Mage();
 
 Gauntlet.GuildHall.Wizard = function() {
   this.name = "Wizard";
+  this.magical = true;
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 40;
@@ -102,6 +103,7 @@ Gauntlet.GuildHall.Wizard.prototype = new Gauntlet.GuildHall.Mage();
 
 Gauntlet.GuildHall.Conjurer = function() {
   this.name = "Conjurer";
+  this.magical = true;
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 10;
 };
@@ -110,6 +112,7 @@ Gauntlet.GuildHall.Conjurer.prototype = new Gauntlet.GuildHall.Mage();
 
 Gauntlet.GuildHall.Sorcerer = function() {
   this.name = "Sorcerer";
+  this.magical = true;
   this.healthBonus = this.healthBonus - 5;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 30;
@@ -123,4 +126,3 @@ Gauntlet.GuildHall.Sorcerer.prototype = new Gauntlet.GuildHall.Mage();
       - Ninja
       - Assassin
  */
-
