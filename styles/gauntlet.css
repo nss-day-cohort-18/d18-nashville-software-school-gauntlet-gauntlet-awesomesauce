@@ -233,31 +233,4 @@ h1, h2, h3, h4, h5, p, label {
   height: 200px;
   background-repeat: no-repeat;
   background-position: 0% 10%;
-=======
-/*Battleground*/
-
-#battleground {
-  margin-left: .5%;
-  margin-right: .5%;
-}
-
-#battlecard-left {
-  display: inline;
-  height: 400px;
-  border: 1px solid black;
-  width: 25%;
-}
-
-#attack-btn {
-  max-width: 5%;
-  background-color: red;
-  color: black;
-  margin: 50px 15px auto 15px;
-}
-
-#battlecard-right {
-  display: inline;
-  height: 400px;
-  border: 1px solid black;
-  width: 25%;
 }
