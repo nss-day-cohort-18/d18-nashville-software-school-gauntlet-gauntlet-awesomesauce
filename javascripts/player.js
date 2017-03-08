@@ -69,6 +69,7 @@ OldGauntlet.Combatants.Human = function() {
 
   this.species = "Human";
   this.intelligence = this.intelligence + 20;
+  this.strength = this.strength + 25;
 
   this.skinColors.push("brown", "red", "white", "disease");
   randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
@@ -86,13 +87,14 @@ OldGauntlet.Combatants.Elf = function () {
 
   this.species = "Elf";
   this.intelligence = this.intelligence + 25;
+  this.strength = this.strength + 25;
 
   this.skinColors.push("blue", "green", "transparent", "black", "white");
   randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
   this.skinColor = this.skinColors[randomSkin];
 
   this.allowedClasses = ["Wizard", "Thief", "Conjurer"],
-}
+};
 
 OldGauntlet.Combatants.Elf.prototype = new OldGauntlet.Combatants.Player();
 
@@ -106,13 +108,14 @@ OldGauntlet.Combatants.Goblin = function () {
 
   this.species = "Goblin";
   this.intelligence = this.intelligence + 25;
+  this.strength = this.strength + 25;
 
   this.skinColors.push("green", "yellow", "pink", "jade");
   randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
   this.skinColor = this.skinColors[randomSkin];
 
   this.allowedClasses = ["Sorcerer", "Thief", "Ninja"],
-}
+};
 
 OldGauntlet.Combatants.Goblin.prototype = new OldGauntlet.Combatants.Player();
 

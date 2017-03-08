@@ -21,7 +21,7 @@
       </div>
 
       <div class="card__button" id="player-name-button">
-        <a class="card__link btn btn--big btn--orange"
+        <a class="card__link btn btn--big btn--orange" id="nameValue"
            href="#"
            next="card--species">
           <span class="btn__prompt">></span>
@@ -30,7 +30,7 @@
       </div>
     </section>
 
-    <section id="class-select" class="card card--species">
+    <section id="species-select" class="card card--species">
       <div class="card__prompt">
         <div>CHOOSE YOUR SPECIES</div>
         <div>
@@ -45,28 +45,28 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-4">
-            <div class="card__button class-select" id="Human">
-              <a class="class__link btn btn--big btn--blue" href="#">
+            <div class="card__button species-select" id="Human">
+              <a class="class__link btn btn--big btn--blue" id="species-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Human</span>
               </a>
             </div>
 
-            <div class="card__button class-select" id="Elf">
-              <a class="class__link btn btn--big btn--blue" href="#">
+            <div class="card__button species-select" id="Elf">
+              <a class="class__link btn btn--big btn--blue" id="species-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Elf</span>
               </a>
             </div>
 
-            <div class="card__button class-select" id="Goblin">
-              <a class="class__link btn btn--big btn--blue" href="#">
+            <div class="card__button species-select" id="Goblin">
+              <a class="class__link btn btn--big btn--blue" id="species-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Goblin</span>
               </a>
             </div>
 
-            <div class="card__button" id="player-name-button">
+            <div class="card__button " id="player-species-button">
               <a class="card__link btn btn--big btn--orange"
                  href="#"
                  next="card--class">
@@ -102,21 +102,21 @@
             </div>
 
             <div class="card__button class-select" id="Valkyrie">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="class__link btn btn--big btn--blue" id="class-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Valkyrie</span>
               </a>
             </div>
 
             <div class="card__button class-select" id="Berserker">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="class__link btn btn--big btn--blue" id="class-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Berserker</span>
               </a>
             </div>
 
             <div class="card__button class-select" id="Monk">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="class__link btn btn--big btn--blue" id="class-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Monk</span>
               </a>
@@ -126,21 +126,21 @@
 
           <div class="col-sm-4">
             <div class="card__button class-select" id="Wizard">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="class__link btn btn--big btn--blue" id="class-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Wizard</span>
               </a>
             </div>
 
             <div class="card__button class-select" id="Sorcerer">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="class__link btn btn--big btn--blue" id="class-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Sorcerer</span>
               </a>
             </div>
 
             <div class="card__button class-select" id="Conjurer">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="class__link btn btn--big btn--blue" id="class-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Conjurer</span>
               </a>
@@ -148,28 +148,28 @@
           </div>
           <div class="col-sm-4">
             <div class="card__button class-select" id="Thief">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="class__link btn btn--big btn--blue" id="class-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Thief</span>
               </a>
             </div>
 
             <div class="card__button class-select" id="Ninja">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="class__link btn btn--big btn--blue" id="class-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Ninja</span>
               </a>
             </div>
 
             <div class="card__button class-select" id="Assassin">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="class__link btn btn--big btn--blue" id="class-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Assassin</span>
               </a>
             </div>
 
             <div class="card__button class-select" id="Class-Surprise-Me">
-              <a class="class__link btn btn--big btn--yellow" href="#">
+              <a class="class__link btn btn--big btn--yellow" id="class-select" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">surprise me</span>
               </a>
@@ -202,42 +202,42 @@
       </div>
 
       <div class="card__button weapon-select" id="Dagger">
-        <a class="class__link btn btn--big btn--blue" href="#">
+        <a class="class__link btn btn--big btn--blue" href="#" id="selected-player-weapon">
           <span class="btn__prompt">></span>
           <span class="btn__text">Dagger</span>
         </a>
       </div>
 
       <div class="card__button weapon-select" id="BroadSword">
-        <a class="class__link btn btn--big btn--blue" href="#">
+        <a class="class__link btn btn--big btn--blue" id="selected-player-weapon" href="#">
           <span class="btn__prompt">></span>
           <span class="btn__text">BroadSword</span>
         </a>
       </div>
 
       <div class="card__button weapon-select" id="WarAxe">
-        <a class="class__link btn btn--big btn--blue" href="#">
+        <a class="class__link btn btn--big btn--blue" id="selected-player-weapon" href="#">
           <span class="btn__prompt">></span>
           <span class="btn__text">WarAxe</span>
         </a>
       </div>
 
          <div class="card__button weapon-select" id="Spear">
-            <a class="class__link btn btn--big btn--blue" href="#">
+            <a class="class__link btn btn--big btn--blue" id="selected-player-weapon" href="#">
             <span class="btn__prompt">></span>
             <span class="btn__text">Spear</span>
             </a>
          </div>
 
          <div class="card__button weapon-select" id="Bubbles">
-            <a class="class__link btn btn--big btn--blue" href="#">
+            <a class="class__link btn btn--big btn--blue" id="selected-player-weapon" href="#">
             <span class="btn__prompt">></span>
             <span class="btn__text">Bubbles</span>
             </a>
          </div>
 
          <div class="card__button weapon-select" id="Class-Surprise-Me">
-            <a class="class__link btn btn--big btn--yellow" href="#">
+            <a class="class__link btn btn--big btn--yellow" id="selected-player-weapon" href="#">
             <span class="btn__prompt">></span>
             <span class="btn__text">Surprise Me</span>
             </a>
