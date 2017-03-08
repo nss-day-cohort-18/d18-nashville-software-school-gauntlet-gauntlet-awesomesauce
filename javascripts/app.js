@@ -9,7 +9,7 @@ let ComputerEnemy;
 let GameOver = false;
 let PlayerOneAlive = true;
 let PlayerTwoAlive = false;
-// PlayerOne.setWeapon(new Gauntlet.WeaponsCase.WarAxe());
+// PlayerOne.setWeapon(new Gauntlet.WeaponsContainer.WarAxe());
 
 // var warrior = new Gauntlet.Combatants.Human();
 // warrior.setWeapon(new WarAxe());
