@@ -77,7 +77,44 @@ OldGauntlet.Combatants.Human = function() {
   this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
 };
 OldGauntlet.Combatants.Human.prototype = new OldGauntlet.Combatants.Player();
+/*
+  Define the base properties for a Elf in a
+  constructor function.
+ */
+OldGauntlet.Combatants.Elf = function () {
+  var randomSkin;
 
+  this.species = "Elf";
+  this.intelligence = this.intelligence + 25;
+
+  this.skinColors.push("blue", "green", "transparent", "black", "white");
+  randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
+  this.skinColor = this.skinColors[randomSkin];
+
+  this.allowedClasses = ["Wizard", "Thief", "Conjurer"],
+}
+
+OldGauntlet.Combatants.Elf.prototype = new OldGauntlet.Combatants.Player();
+
+/*
+  Define the base properties for a Goblin in a
+  constructor function.
+ */
+
+OldGauntlet.Combatants.Goblin = function () {
+  var randomSkin;
+
+  this.species = "Goblin";
+  this.intelligence = this.intelligence + 25;
+
+  this.skinColors.push("green", "yellow", "pink", "jade");
+  randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
+  this.skinColor = this.skinColors[randomSkin];
+
+  this.allowedClasses = ["Sorcerer", "Thief", "Ninja"],
+}
+
+OldGauntlet.Combatants.Goblin.prototype = new OldGauntlet.Combatants.Player();
 
 /*
   Define the base properties for a monster in a
