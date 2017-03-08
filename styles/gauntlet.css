@@ -10,6 +10,7 @@ body {
 }
 
 .field__textinput {
+  color: black;
   font-size: 1em;
   padding: 15px 0;
   text-align: center;
@@ -27,6 +28,7 @@ body {
 
 
 .card__prompt {
+  color: white;
   font-size: 1.1em;
   font-weight: bold;
   text-align: center;
