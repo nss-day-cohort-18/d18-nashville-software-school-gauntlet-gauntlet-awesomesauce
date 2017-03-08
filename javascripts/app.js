@@ -69,19 +69,25 @@ $(document).ready(function() {
   TODO: Add event listeners to class select, weapon select, start battle, etc
 */
 $(".class-select").click(function(e) {
-  console.log("you clicked a class");
+    $("#selected-player-class").val($(this).closest("div").prop("id"));
+    PlayerClass = $(this).closest("div").prop("id");
+    console.log("You are the", PlayerClass);
 })
 
 $(".weapon-select").click(function(e) {
-  console.log("you clicked on a weapon");
+  $("#selected-player-weapon").val($(this).closest("div").prop("id"));
+    PlayerWeapon = $(this).closest("div").prop("id");
+    console.log("Your weapon is a", PlayerWeapon);
 })
 
 $("#select-weapon").click(function(e) {
+  // PlayerOne.setClass(PlayerClass);
   console.log("you clicked a weapon");
 })
 
 $("#Start-battle-button").click(function(e) {
-    console.log("you clicked a weapon");
+  PlayerOne.setWeapon(PlayerWeapon);
+  console.log("Player One is ready for battle");
 })
 
 
@@ -108,6 +114,7 @@ $("#Start-battle-button").click(function(e) {
       case "card--play-again":
         moveAlong = ($("#player-name").val() !== "");
         break;
+  }
 
     if (moveAlong) {
       $(".card").hide();
