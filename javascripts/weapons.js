@@ -1,6 +1,8 @@
 var Gauntlet = (function(OldGauntlet) {
 
-var Weapon = function() {
+OldGauntlet.WeaponsContainer = {};
+
+OldGauntlet.WeaponsContainer.Weapon = function() {
   this.name = "bare hands";
   this.damage = 1;
   this.hands = 2;
@@ -10,26 +12,41 @@ var Weapon = function() {
   }
 };
 
-var Dagger = function() {
-  this.name = "dagger";
+OldGauntlet.WeaponsContainer.Dagger = function() {
+  this.name = "Dagger";
   this.damage = 4;
   this.hands = 1;
 };
-Dagger.prototype = new Weapon();
+OldGauntlet.WeaponsContainer.Dagger.prototype = new OldGauntlet.WeaponsContainer.Weapon();
 
-var BroadSword = function() {
-  this.name = "broad sword";
+OldGauntlet.WeaponsContainer.BroadSword.prototype = function() {
+  this.name = "Broad Sword";
   this.damage = 14;
   this.hands = 2;
 };
-BroadSword.prototype = new Weapon();
+OldGauntlet.WeaponsContainer.BroadSword.prototype = new OldGauntlet.WeaponsContainer.Weapon();
 
-var WarAxe = function() {
-  this.name = "war axe";
+OldGauntlet.WeaponsContainer.WarAxe.prototype = function() {
+  this.name = "War Axe";
   this.damage = 18;
   this.hands = 2;
 };
-WarAxe.prototype = new Weapon();
+OldGauntlet.WeaponsCase.WarAxe.prototype = new OldGauntlet.WeaponsContainer.Weapon();
+
+OldGauntlet.WeaponsContainer.Bubbles.prototype = function() {
+  this.name = "Bubbles";
+  this.damage = 1;
+  this.hands = 1;
+};
+OldGauntlet.WeaponsCase.Bubbles.prototype = new OldGauntlet.WeaponsContainer.Weapon();
+
+OldGauntlet.WeaponsContainer.Spear.prototype = new OldGauntlet.WeaponsContainer.Spear();
+  this.name = "Spear";
+  this.damage = 15;
+  this.hands = 2;
+};
+OldGauntlet.WeaponsCase.Spear.prototype = new OldGauntlet.WeaponsContainer.Weapon();
+
 
 return OldGauntlet;
 
