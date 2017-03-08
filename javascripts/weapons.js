@@ -1,3 +1,5 @@
+var Gauntlet = (function(OldGauntlet) {
+
 var Weapon = function() {
   this.name = "bare hands";
   this.damage = 1;
@@ -29,3 +31,6 @@ var WarAxe = function() {
 };
 WarAxe.prototype = new Weapon();
 
+return OldGauntlet;
+
+})(Gauntlet || {});
