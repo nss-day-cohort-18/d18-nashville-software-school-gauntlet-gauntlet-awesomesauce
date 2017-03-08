@@ -126,3 +126,46 @@ Gauntlet.GuildHall.Sorcerer.prototype = new Gauntlet.GuildHall.Mage();
       - Ninja
       - Assassin
  */
+
+
+// Stealth Prototype
+Gauntlet.GuildHall.Stealth = function() {
+  this.name = "Stealth";
+  this.magical = false;
+  this.healthBonus = this.healthBonus + 10;
+  this.strengthBonus = this.strengthBonus - 5;
+  this.intelligenceBonus = this.intelligenceBonus + 10;
+};
+Gauntlet.GuildHall.Stealth.prototype = new Gauntlet.GuildHall.PlayerClass();
+
+
+// Stealth Classes
+Gauntlet.GuildHall.Thief = function() {
+  this.name = "Thief";
+  this.magical = false;
+  this.healthBonus = this.healthBonus + 5;
+  this.strengthBonus = this.strengthBonus + 10;
+  this.intelligenceBonus = this.intelligenceBonus + 30;
+};
+Gauntlet.GuildHall.Thief.prototype = new Gauntlet.GuildHall.Stealth();
+
+
+Gauntlet.GuildHall.Ninja = function() {
+  this.name = "Ninja";
+  this.magical = false;
+  this.healthBonus = this.healthBonus - 5;
+  this.strengthBonus = this.strengthBonus + 10;
+  this.intelligenceBonus = this.intelligenceBonus + 20;
+};
+Gauntlet.GuildHall.Ninja.prototype = new Gauntlet.GuildHall.Stealth();
+
+
+Gauntlet.GuildHall.Assassin = function() {
+  this.name = "Assassin";
+  this.magical = false;
+  this.healthBonus = this.healthBonus + 10;
+  this.strengthBonus = this.strengthBonus + 30;
+  this.intelligenceBonus = this.intelligenceBonus + 25;
+};
+Gauntlet.GuildHall.Assassin.prototype = new Gauntlet.GuildHall.Stealth();
+
