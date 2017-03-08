@@ -4,6 +4,7 @@
 
 let PlayerOne;
 let PlayerClass;
+let PlayerSpecies;
 let PlayerWeapon;
 let ComputerEnemy;
 let GameOver = false;
@@ -58,6 +59,7 @@ $(document).ready(function() {
 
 //link random weapon function to Surprise Me Button
     ComputerEnemy.setWeapon("Class-Surprise-Me");
+    
 
 //Assignes Player One obj to player name element value, so that we can link to cards
     PlayerOne.playerName = $("#player-name").val();
@@ -68,8 +70,15 @@ $(document).ready(function() {
 /*
   TODO: Add event listeners to class select, weapon select, start battle, etc
 */
+
+$(".species-select").click(function(e) {
+  $("#species-select").val($(this).closest("div").prop("id"));
+PlayerSpecies = $(this).closest("div").prop("id");
+console.log("You are the", PlayerSpecies);
+})
+
 $(".class-select").click(function(e) {
-    $("#selected-player-class").val($(this).closest("div").prop("id"));
+    $("#class-select").val($(this).closest("div").prop("id"));
     PlayerClass = $(this).closest("div").prop("id");
     console.log("You are the", PlayerClass);
 })
