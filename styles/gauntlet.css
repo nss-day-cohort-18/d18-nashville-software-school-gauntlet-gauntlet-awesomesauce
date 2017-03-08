@@ -21,9 +21,10 @@ body {
 /*
   Section styles
  */
-.card { 
+.card {
   display: none;
 }
+
 
 .card__prompt {
   font-size: 1.1em;
@@ -104,6 +105,135 @@ body {
   border-radius: 0 5px 5px 0;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1f20;
+  font-family: 'PT Sans', serif;
+  font-size: 16px;
+}
+
+.card-svg {
+  fill: #ECD7B0;
+}
+
+.char-card {
+  border: 8px solid white;
+  border-color: white;
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background-color: #900C3F  ;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+svg {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+h1, h2, h3, h4, h5, p, label {
+  margin: 0px;
+}
+
+.card-content {
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 180px;
+  padding: 5px 10px 10px 10px;
+  overflow: hidden;
+}
+.card-content .name {
+  width: 225px;
+  overflow: hidden;
+}
+.card-content .levels {
+  width: 200px;
+}
+.card-content .pill {
+  border-radius: 15px;
+  display: inline-block;
+  margin: 2px 0px 2px 0px;
+  padding: 2px 0px 2px 8px;
+  font-size: 12px;
+  background-color: #D7BF94;
+}
+.card-content .pill strong, .card-content .pill span {
+  border-radius: 15px;
+  background-color: white;
+  margin-left: 5px;
+  margin-right: 2px;
+  padding: 0px 4px;
+}
+.card-content p {
+  margin-top: 5px;
+  font-size: 12px;
+  width: 125px;
+}
+
+.ability-scores {
+  margin-top: 7px;
+  width: 145px;
+  display: flex;
+  align-items: stretch;
+  font-size: 0.9em;
+}
+.ability-scores .scores {
+  display: block;
+  width: 20px;
+  text-align: center;
+  margin-top: 3px;
+}
+.ability-scores .scores .score {
+  padding: 0px 0px 1.5px 0px;
+}
+.ability-scores .bars {
+  border-left: 1px solid black;
+  width: 100px;
+  padding-left: 4px;
+  margin-lefT: 2px;
+  margin-top: 0px;
+  position: relative;
+}
+.ability-scores .bars .bar {
+  background-color: #D7BF94;
+  height: 15.33px;
+  display: block;
+  margin: 5px 0px 2px 0px;
+  text-align: left;
+  font-size: 0.85em;
+  padding-left: 5px;
+  padding-right: 10px;
+  color: black;
+}
+.ability-scores .bars .mid-bar {
+  display: block;
+  position: absolute;
+  height: 100%;
+  border-left: 1px dashed rgba(255, 0, 0, 0.45);
+  left: calc(50% + 16px);
+}
+
+.char-img {
+  z-index: 1;
+  position: absolute;
+  right: -250px;
+  top: 0px;
+  background: linear-gradient(rgba(255, 0, 0, 0.45),
+  rgba(255, 0, 0, 0.45)),
+  url("http://img.photobucket.com/albums/0903/FelberMun/tumblr_mipjcsluFk1qimwd3o1_500.png");
+  width: 600px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: 0% 10%;
+=======
 /*Battleground*/
 
 #battleground {

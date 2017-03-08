@@ -108,7 +108,6 @@ $("#Start-battle-button").click(function(e) {
       case "card--play-again":
         moveAlong = ($("#player-name").val() !== "");
         break;
-  }
 
     if (moveAlong) {
       $(".card").hide();
