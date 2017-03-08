@@ -15,7 +15,7 @@
 
     <section id="player-setup" class="card card--name">
       <div class="card__prompt">
-        <div>RECORD YOUR NAME, ADVENTURER</div>
+        <div class>RECORD YOUR NAME, ADVENTURER</div>
         <div class="field">
           <input type="text" autofocus="true" id="player-name" class="field__textinput">
         </div>
@@ -185,7 +185,62 @@
       </div>
     </section>
 
-    <section id="battleground" class="card card--battleground"></section>
+    <section id="battleground" class="card card--battleground">
+
+      <div class="char-card" style="position:relative;">
+          <svg height="200" width="300"><polygon class="card-svg" points="0,0 0,200 150,200 250,0"/></svg>
+          <div class="battlecard-left">
+            <div class="char-img"></div>
+              <div class="card-content">
+                <br>
+                  <h2 class="name">{name}</h2>
+                  <div class="levels">
+                    <label class="pill">{class}<strong>2</strong></label>
+                  <label class="pill">{weapon}<strong>2</strong></label>
+                </div>
+              <br>
+            <div class="bars">
+          <div class="mid-bar"></div>
+            <div class="bar" style="width: 66%;">Attack: {attack}</div>
+              <div class="bar" style="width: 66%;">health: {health}</div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card__button">
+        <a class="card__link btn btn--big btn--orange"
+           href="#">
+          <span class="btn__prompt">></span>
+          <span class="btn__text">Attack</span>
+        </a>
+      </div>
+
+      <div class="char-card" style="position:relative;">
+          <svg height="200" width="300"><polygon class="card-svg" points="0,0 0,200 150,200 250,0"/></svg>
+          <div class="battlecard-left">
+            <div class="char-img"></div>
+              <div class="card-content">
+                <br>
+                  <h2 class="name">{name}</h2>
+                  <div class="levels">
+                    <label class="pill">{class}<strong>2</strong></label>
+                  <label class="pill">{weapon}<strong>2</strong></label>
+                </div>
+              <br>
+            <div class="bars">
+          <div class="mid-bar"></div>
+            <div class="bar" style="width: 66%;">Attack: {attack}</div>
+              <div class="bar" style="width: 66%;">health: {health}</div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
 
   </article>
 
