@@ -1,14 +1,15 @@
 /*
   TODO: Modularize this code with IIFE or Browserify
  */
-var Gauntlet = Gauntlet || {};
-Gauntlet.Combatants = {};
+var Gauntlet = (function(OldGauntlet) {
+
+OldGauntlet.Combatants = {};
 
 /*
-  Define the base object for any player of Gauntlet,
+  Define the base object for any player of OldGauntlet,
   whether a human player or a monster.
  */
-Gauntlet.Combatants.Player = function(name) {
+OldGauntlet.Combatants.Player = function(name) {
   this.species = null;
   this.class = null;
   this.weapon = null;
@@ -40,11 +41,11 @@ Gauntlet.Combatants.Player = function(name) {
   };
 };
 
-Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
+OldGauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
   this.weapon = newWeapon;
 }
 
-Gauntlet.Combatants.Player.prototype.generateClass = function() {
+OldGauntlet.Combatants.Player.prototype.generateClass = function() {
   // Get a random index from the allowed classes array
   var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
 
@@ -52,7 +53,7 @@ Gauntlet.Combatants.Player.prototype.generateClass = function() {
   var randomClass = this.allowedClasses[random];
 
   // Composes the corresponding player class into the player object
-  this.class = new Gauntlet.GuildHall[randomClass]();
+  this.class = new OldGauntlet.GuildHall[randomClass]();
 
   // Add the health bonus
   this.health += this.class.healthBonus;
@@ -60,10 +61,10 @@ Gauntlet.Combatants.Player.prototype.generateClass = function() {
 };
 
 /*
-  Define the base properties for a human in a 
+  Define the base properties for a human in a
   constructor function.
  */
-Gauntlet.Combatants.Human = function() {
+OldGauntlet.Combatants.Human = function() {
   var randomSkin;
 
   this.species = "Human";
@@ -75,18 +76,21 @@ Gauntlet.Combatants.Human = function() {
 
   this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
 };
-Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
+OldGauntlet.Combatants.Human.prototype = new OldGauntlet.Combatants.Player();
 
 
 /*
-  Define the base properties for a monster in a 
+  Define the base properties for a monster in a
   constructor function.
  */
-Gauntlet.Combatants.Monster = function() {
+OldGauntlet.Combatants.Monster = function() {
   this.health = this.health - 30;
   this.intelligence = this.intelligence -20;
   this.strength = this.strength + 30;
 };
 
-Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
+OldGauntlet.Combatants.Monster.prototype = new OldGauntlet.Combatants.Player();
 
+return OldGauntlet;
+
+})(Gauntlet || {});

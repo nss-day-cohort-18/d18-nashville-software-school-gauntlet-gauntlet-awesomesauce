@@ -1,15 +1,24 @@
 /*
   Test code to generate a human player and an orc player
  */
-var warrior = new Gauntlet.Combatants.Human();
-warrior.setWeapon(new WarAxe());
-warrior.generateClass();  // This will be used for "Surprise me" option
-console.log(warrior.toString());
 
-var orc = new Gauntlet.Combatants.Orc();
-orc.generateClass();
-orc.setWeapon(new BroadSword());
-console.log(orc.toString());
+let PlayerOne;
+let PlayerClass;
+let PlayerWeapon;
+let ComputerEnemy;
+let GameOver = false;
+let PlayerOneAlive = true;
+let PlayerTwoAlive = false;
+
+// var warrior = new Gauntlet.Combatants.Human();
+// warrior.setWeapon(new WarAxe());
+// warrior.generateClass();  // This will be used for "Surprise me" option
+// console.log(warrior.toString());
+
+// var orc = new Gauntlet.Combatants.Orc();
+// orc.generateClass();
+// orc.setWeapon(new BroadSword());
+// console.log(orc.toString());
 
 /*
   Test code to generate a spell
@@ -17,13 +26,31 @@ console.log(orc.toString());
 var spell = new Gauntlet.SpellBook.Sphere();
 console.log("spell: ", spell.toString());
 
-
 $(document).ready(function() {
   /*
     Show the initial view that accepts player name
    */
   $("#player-setup").show();
 
+  // $("#player-name-button").click(function(e) {
+  //   PlayerOne = new OldGauntlet.Combatants.Human();
+    // console.log("PlayerOne", PlayerOne);
+    // var combatantType = ["Human", "Orc", "Dwarf"];
+    // var random = Math.round(Math.random() * (combatantType.length-1));
+    // console.log("random", random);
+    // var randomCombatant = combatantType[random];
+    // ComputerEnemy = new OldGauntlet.Combatants[randomCombatant]();
+    // ComputerEnemy.generateClass();
+    // ComputerEnemy.setWeapon("Class-Surprise-Me");
+    // PlayerOne.playerName = $("#player-name").val();
+//   })
+// console.log("PlayerOne", PlayerOne);
+// console.log("ComputerEnemy", ComputerEnemy);
+//where player will choose a class and weapon
+//
+//
+//
+//
   /*
     When any button with card__link class is clicked,
     move on to the next view.
@@ -39,13 +66,24 @@ $(document).ready(function() {
       case "card--weapon":
         moveAlong = ($("#player-name").val() !== "");
         break;
-    }
+      case "card--battleground":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
+      case "card--play-again":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
+  }
 
     if (moveAlong) {
       $(".card").hide();
       $("." + nextCard).show();
     }
   });
+
+  /*
+  Placeholder to show player selected weapons/class
+ */
+
 
   /*
     When the back button clicked, move back a view
