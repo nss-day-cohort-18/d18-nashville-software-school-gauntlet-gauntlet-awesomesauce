@@ -102,6 +102,9 @@ $("#Start-battle-button").click(function(e) {
     var moveAlong = false;
 
     switch (nextCard) {
+      case "card--species":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
       case "card--class":
         moveAlong = ($("#player-name").val() !== "");
         break;

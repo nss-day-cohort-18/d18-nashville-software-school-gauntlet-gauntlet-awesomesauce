@@ -23,16 +23,64 @@
       <div class="card__button" id="player-name-button">
         <a class="card__link btn btn--big btn--orange"
            href="#"
-           next="card--class">
+           next="card--species">
           <span class="btn__prompt">></span>
-          <span class="btn__text">Select class</span>
+          <span class="btn__text">Select Your Species</span>
         </a>
       </div>
     </section>
 
+    <section id="class-select" class="card card--species">
+      <div class="card__prompt">
+        <div>CHOOSE YOUR SPECIES</div>
+        <div>
+          <a class="card__back btn btn--small"
+             href="#"
+             previous="card--name">
+            <span class="btn__prompt">&lt;</span>
+            <span class="btn__text">Back</span>
+          </a>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card__button class-select" id="Human">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">Human</span>
+              </a>
+            </div>
+
+            <div class="card__button class-select" id="Elf">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">Elf</span>
+              </a>
+            </div>
+
+            <div class="card__button class-select" id="Goblin">
+              <a class="class__link btn btn--big btn--blue" href="#">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">Goblin</span>
+              </a>
+            </div>
+
+            <div class="card__button" id="player-name-button">
+              <a class="card__link btn btn--big btn--orange"
+                 href="#"
+                 next="card--class">
+                <span class="btn__prompt">></span>
+                <span class="btn__text">Select class</span>
+              </a>
+            </div>
+          </section>
+
+    </section>
+
     <section id="class-select" class="card card--class">
       <div class="card__prompt">
-        <div>CHOOSE YOUR PATH</div>
+        <div>CHOOSE YOUR SPECIES</div>
         <div>
           <a class="card__back btn btn--small"
              href="#"
@@ -67,7 +115,7 @@
               </a>
             </div>
 
-            <div class="card__button class-select">
+            <div class="card__button class-select" id="Monk">
               <a class="class__link btn btn--big btn--blue" href="#">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Monk</span>
