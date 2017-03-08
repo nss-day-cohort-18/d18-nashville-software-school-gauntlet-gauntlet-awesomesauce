@@ -137,7 +137,7 @@ OldGauntlet.GuildHall.Stealth = function() {
   this.strengthBonus = this.strengthBonus - 5;
   this.intelligenceBonus = this.intelligenceBonus + 10;
 };
-OldGauntlet.GuildHall.Stealth.prototype = new Gauntlet.GuildHall.PlayerClass();
+OldGauntlet.GuildHall.Stealth.prototype = new OldGauntlet.GuildHall.PlayerClass();
 
 
 // Stealth Classes
@@ -148,7 +148,7 @@ OldGauntlet.GuildHall.Thief = function() {
   this.strengthBonus = this.strengthBonus + 10;
   this.intelligenceBonus = this.intelligenceBonus + 30;
 };
-OldGauntlet.GuildHall.Thief.prototype = new Gauntlet.GuildHall.Stealth();
+OldGauntlet.GuildHall.Thief.prototype = new OldGauntlet.GuildHall.Stealth();
 
 
 OldGauntlet.GuildHall.Ninja = function() {
@@ -158,7 +158,7 @@ OldGauntlet.GuildHall.Ninja = function() {
   this.strengthBonus = this.strengthBonus + 10;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-OldGauntlet.GuildHall.Ninja.prototype = new Gauntlet.GuildHall.Stealth();
+OldGauntlet.GuildHall.Ninja.prototype = new OldGauntlet.GuildHall.Stealth();
 
 
 OldGauntlet.GuildHall.Assassin = function() {
@@ -168,7 +168,7 @@ OldGauntlet.GuildHall.Assassin = function() {
   this.strengthBonus = this.strengthBonus + 30;
   this.intelligenceBonus = this.intelligenceBonus + 25;
 };
-OldGauntlet.GuildHall.Assassin.prototype = new Gauntlet.GuildHall.Stealth();
+OldGauntlet.GuildHall.Assassin.prototype = new OldGauntlet.GuildHall.Stealth();
 
 return OldGauntlet;
 
