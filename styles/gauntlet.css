@@ -1,5 +1,5 @@
 body {
-  font-family: "Lato", "Helvetica", "sans-serif";
+  font-family: 'Amarante', cursive;
   margin: 0;
   padding: 10px;
   font-size: 3em;
@@ -7,6 +7,7 @@ body {
 
 .field {
   margin: 20px 0 0 0;
+  font-family: 'New Rocker', cursive;
 }
 
 .field__textinput {
@@ -24,6 +25,7 @@ body {
  */
 .card {
   display: none;
+  font-family: 'Pirata One', cursive;
 }
 
 
@@ -229,10 +231,23 @@ h1, h2, h3, h4, h5, p, label {
   right: -250px;
   top: 0px;
   background: linear-gradient(rgba(255, 0, 0, 0.45),
-  rgba(255, 0, 0, 0.45)),
-  url("http://img.photobucket.com/albums/0903/FelberMun/tumblr_mipjcsluFk1qimwd3o1_500.png");
+  rgba(255, 0, 0, 0.45))
+  background-image: url("http://img.photobucket.com/albums/0903/FelberMun/tumblr_mipjcsluFk1qimwd3o1_500.png");
   width: 600px;
   height: 200px;
   background-repeat: no-repeat;
   background-position: 0% 10%;
+}
+
+/*canvas styling*/
+
+canvas {
+
+  display:block;
+  margin: 0 auto;
+  overflow:hidden;
+  border-radius: 1000px;
+  margin-top: 10px;
+  box-shadow: 0px -1px 20px 20px #ac2121;
+  margin-top: 10px;
 }
