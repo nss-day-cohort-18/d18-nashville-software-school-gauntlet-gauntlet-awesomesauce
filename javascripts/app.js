@@ -45,6 +45,8 @@ $(document).ready(function() {
     PlayerOne = new Gauntlet.Combatants.Player();
       console.log("PlayerOne", PlayerOne);
 
+
+
 //defines the combatantTypes
     var combatantType = ["Human", "Orc", "Dwarf"];
 
@@ -53,9 +55,12 @@ $(document).ready(function() {
     console.log("random", random);
 
 //randomizes the combatant
-    var randomCombatant = combatantType[random];
-    ComputerEnemy = new Gauntlet.Combatants[randomCombatant]();
-    ComputerEnemy.generateClass();
+
+
+// ComputerEnemy =
+//     var randomCombatant = combatantType[random];
+//     ComputerEnemy = new Gauntlet.Combatants.Monster[randomCombatant]();
+//     ComputerEnemy.generateClass();
 
 //link random weapon function to Surprise Me Button
     ComputerEnemy.setWeapon("Class-Surprise-Me");
@@ -151,5 +156,42 @@ $("#Start-battle-button").click(function(e) {
     $(".card").hide();
     $("." + previousCard).show();
   });
+
+
+  /*
+    When the defeatYourEnemies button is clicked,
+    also add all player and enemy information onto card
+   */
+
+
+  $("#defeatYourEnemies").click(function() {
+    ComputerEnemy = new Gauntlet.Combatants.Orc();
+    ComputerEnemy.generateClass(ComputerEnemy);
+      console.log("Enemy", ComputerEnemy);
+    $("#playerName").html(PlayerOne.playerName);
+    $("#playerclass").html(PlayerOne.class);
+    $("#playerweapon").html(PlayerOne.weapon);
+    $("#playerattack").html("STR : " + PlayerOne.strength);
+    $("#playerhealth").html("Health : " + PlayerOne.health);
+
+
+    ComputerEnemy = new Gauntlet.Combatants.Orc();
+    ComputerEnemy.generateClass(ComputerEnemy);
+    ComputerEnemy.generateWeapon(ComputerEnemy);
+    ComputerEnemy.damage(ComputerEnemy);
+      console.log("Enemy", ComputerEnemy);
+
+    $("#enemyName").html(ComputerEnemy.species);
+
+    $("#enemyClass").html(ComputerEnemy.class.name);
+    $("#enemyWeapon").html(ComputerEnemy.weapon);
+// ADD STRENGTH WHEN FIXED
+    $("#enemyAttack").html("STR : ");
+
+    $("#enemyHealth").html("Health : " +ComputerEnemy.health);
+    $("#enemyDamage").html(ComputerEnemy.damage);
+  });
+
+
 
 });

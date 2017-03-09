@@ -247,7 +247,7 @@
       <div class="card__button">
         <a class="card__link btn btn--big btn--orange"
            href="#"
-           next="card--battleground">
+           next="card--battleground" id="defeatYourEnemies">
           <span class="btn__prompt">></span>
           <span class="btn__text">defeat your enemies</span>
         </a>
@@ -269,14 +269,14 @@
                 <br>
                   <h2 class="name" id="playerName"></h2>
                   <div class="levels">
-                    <label class="pill" id="class"></label>
-                  <label class="pill" id="weapon"></label>
+                    <label class="pill" id="playerclass"></label>
+                  <label class="pill" id="playerweapon"></label>
                 </div>
               <br>
             <div class="bars">
           <div class="mid-bar"></div>
-            <div class="bar" id="attack" style="width: 66%;"></div>
-              <div class="bar" id="health" style="width: 66%;"></div>
+            <div class="bar" id="playerattack" style="width: 66%;"></div>
+              <div class="bar" id="playerhealth" style="width: 66%;"></div>
             </div>
           </div>
           </div>
@@ -293,22 +293,35 @@
 
       <div class="char-card" style="position:relative;">
           <svg height="200" width="300"><polygon class="card-svg" points="0,0 0,200 150,200 250,0"/></svg>
-          <div class="battlecard-left">
+          <div class="battlecard-right">
             <div class="char-img"></div>
               <div class="card-content">
                 <br>
-                  <h2 class="name" id="playerName"></h2>
+                  <h2 class="name" id="enemyName"></h2>
                   <div class="levels">
-                    <label class="pill" id="class"></label>
-                  <label class="pill" id="weapon"></label>
+                    <label class="pill" id="enemyClass"></label>
+                  <label class="pill" id="enemyWeapon"></label>
                 </div>
               <br>
             <div class="bars">
           <div class="mid-bar"></div>
-            <div class="bar" id="attack" style="width: 66%;"></div>
-              <div class="bar" id="health" style="width: 66%;"></div>
+            <div class="bar" id="enemyAttack" style="width: 66%;"></div>
+              <div class="bar" id="enemyHealth" style="width: 66%;"></div>
+              <div class="bar" id="enemyDamage" style="width: 66%;"></div>
             </div>
           </div>
+          </div>
+        </div>
+
+        <div class="card__prompt">
+          <div>CHOOSE YOUR SPECIES</div>
+          <div>
+            <a class="card__back btn btn--small"
+               href="#"
+               previous="card--weapon">
+              <span class="btn__prompt">&lt;</span>
+              <span class="btn__text">Back</span>
+            </a>
           </div>
         </div>
 
