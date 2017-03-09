@@ -6,4 +6,5 @@ OldGauntlet.Damage = () =>
 
 return OldGauntlet;
 
+
 })(Gauntlet || {});

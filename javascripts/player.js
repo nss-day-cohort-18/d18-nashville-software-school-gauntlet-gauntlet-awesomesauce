@@ -9,6 +9,8 @@ OldGauntlet.Combatants = {};
   Define the base object for any player of OldGauntlet,
   whether a human player or a monster.
  */
+
+
 OldGauntlet.Combatants.Player = function(name) {
   this.species = null;
   this.class = null;
@@ -40,6 +42,14 @@ OldGauntlet.Combatants.Player = function(name) {
     return output;
   };
 };
+
+OldGauntlet.Combatants.Player.prototype.setSpecies = function(PlayerSpecies) {
+  this.species = PlayerSpecies;
+}
+
+OldGauntlet.Combatants.Player.prototype.setClass = function(PlayerSpecies) {
+  this.class = PlayerClass;
+}
 
 OldGauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
   this.weapon = newWeapon;
@@ -93,7 +103,7 @@ OldGauntlet.Combatants.Elf = function () {
   randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
   this.skinColor = this.skinColors[randomSkin];
 
-  this.allowedClasses = ["Wizard", "Thief", "Conjurer"],
+  this.allowedClasses = ["Wizard", "Thief", "Conjurer"];
 };
 
 OldGauntlet.Combatants.Elf.prototype = new OldGauntlet.Combatants.Player();
@@ -114,7 +124,7 @@ OldGauntlet.Combatants.Goblin = function () {
   randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
   this.skinColor = this.skinColors[randomSkin];
 
-  this.allowedClasses = ["Sorcerer", "Thief", "Ninja"],
+  this.allowedClasses = ["Sorcerer", "Thief", "Ninja"];
 };
 
 OldGauntlet.Combatants.Goblin.prototype = new OldGauntlet.Combatants.Player();

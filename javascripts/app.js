@@ -42,7 +42,7 @@ $(document).ready(function() {
 //add an event listener to player name
   $("#player-name-button").click(function(e) {
 //set that PlayerOne name to human prototype to inherit attributes
-    PlayerOne = new Gauntlet.Combatants.Human();
+    PlayerOne = new Gauntlet.Combatants.Player();
       console.log("PlayerOne", PlayerOne);
 
 //defines the combatantTypes
@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 //link random weapon function to Surprise Me Button
     ComputerEnemy.setWeapon("Class-Surprise-Me");
-    
+
 
 //Assignes Player One obj to player name element value, so that we can link to cards
     PlayerOne.playerName = $("#player-name").val();
@@ -74,19 +74,23 @@ $(document).ready(function() {
 $(".species-select").click(function(e) {
   $("#species-select").val($(this).closest("div").prop("id"));
 PlayerSpecies = $(this).closest("div").prop("id");
-console.log("You are the", PlayerSpecies);
+PlayerOne.setSpecies(PlayerSpecies);
+console.log("Add Class to Prototype", PlayerOne);
+
 })
 
 $(".class-select").click(function(e) {
-    $("#class-select").val($(this).closest("div").prop("id"));
-    PlayerClass = $(this).closest("div").prop("id");
-    console.log("You are the", PlayerClass);
+  $("#class-select").val($(this).closest("div").prop("id"));
+PlayerClass = $(this).closest("div").prop("id");
+PlayerOne.setClass(PlayerClass);
+    console.log("Add Class to Prototype", PlayerOne);
 })
 
 $(".weapon-select").click(function(e) {
   $("#selected-player-weapon").val($(this).closest("div").prop("id"));
-    PlayerWeapon = $(this).closest("div").prop("id");
-    console.log("Your weapon is a", PlayerWeapon);
+PlayerWeapon = $(this).closest("div").prop("id");
+PlayerOne.setWeapon(PlayerWeapon);
+  console.log("Add Weapon to Prototype", PlayerOne)
 })
 
 $("#select-weapon").click(function(e) {
