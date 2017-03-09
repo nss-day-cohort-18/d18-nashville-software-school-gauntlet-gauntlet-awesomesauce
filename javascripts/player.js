@@ -47,6 +47,22 @@ OldGauntlet.Combatants.Player.prototype.setSpecies = function(PlayerSpecies) {
   this.species = PlayerSpecies;
 }
 
+OldGauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
+  if (newWeapon === "Class-Surprise-Me" || newWeapon === undefined) {
+    this.weapon = PlayerOne.generateWeapon();
+  }
+  else {
+  this.weapon = new OldGauntlet.WeaponsCase[newWeapon]();
+  }
+}
+OldGauntlet.Combatants.Player.prototype.generateWeapon = function() {
+  // Get a random index from the allowed classes array
+  var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
+  var randomWeapon = this.allowedWeapons[random];
+  this.weapon = new OldGauntlet.WeaponsContainer[randomWeapon]();
+  return this.weapon;
+}
+
 OldGauntlet.Combatants.Player.prototype.setClass = function(PlayerSpecies) {
   this.class = PlayerClass;
 }

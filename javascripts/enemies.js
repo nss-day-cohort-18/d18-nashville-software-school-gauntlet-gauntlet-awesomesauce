@@ -18,7 +18,7 @@ OldGauntlet.Combatants.Orc = function() {
 
     this.weapon = randomWeapon;
     return this.weapon;
-  }
+  };
 
   this.generateClass = function() {
     // Get a random index from the allowed classes array
