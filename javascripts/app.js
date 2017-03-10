@@ -42,6 +42,7 @@ $(document).ready(function() {
 //add an event listener to player name
   $("#player-name-button").click(function(e) {
 //set that PlayerOne name to human prototype to inherit attributes
+
     PlayerOne = new Gauntlet.Combatants.Human();
       console.log("PlayerOne", PlayerOne);
 //defines the combatantTypes
@@ -186,9 +187,6 @@ $("#Start-battle-button").click(function(e) {
     $("#enemyDamage").html(ComputerEnemy.damage);
   });
 
-
-
-});
 
 // canvas element
 //
