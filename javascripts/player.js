@@ -43,6 +43,7 @@ OldGauntlet.Combatants.Player = function(name) {
   };
 };
 
+
 OldGauntlet.Combatants.Player.prototype.setSpecies = function(PlayerSpecies) {
   this.species = PlayerSpecies;
 }
