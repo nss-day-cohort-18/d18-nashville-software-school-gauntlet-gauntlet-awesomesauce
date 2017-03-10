@@ -42,18 +42,14 @@ $(document).ready(function() {
 //add an event listener to player name
   $("#player-name-button").click(function(e) {
 //set that PlayerOne name to human prototype to inherit attributes
-    PlayerOne = new Gauntlet.Combatants.Player();
+    PlayerOne = new Gauntlet.Combatants.Human();
       console.log("PlayerOne", PlayerOne);
-
-
-
 //defines the combatantTypes
     var combatantType = ["Human", "Orc", "Dwarf"];
-
 //creates the randomize variable
     var random = Math.round(Math.random() * (combatantType.length-1));
+    var randomCombatant = combatantType[random];
     console.log("random", random);
-
 //randomizes the combatant
 
 
@@ -166,9 +162,6 @@ $("#Start-battle-button").click(function(e) {
 
 
   $("#defeatYourEnemies").click(function() {
-    ComputerEnemy = new Gauntlet.Combatants.Orc();
-    ComputerEnemy.generateClass(ComputerEnemy);
-      console.log("Enemy", ComputerEnemy);
     $("#playerName").html(PlayerOne.playerName);
     $("#playerclass").html(PlayerOne.class);
     $("#playerweapon").html(PlayerOne.weapon);
