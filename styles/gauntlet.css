@@ -231,8 +231,7 @@ h1, h2, h3, h4, h5, p, label {
   right: -250px;
   top: 0px;
   background: linear-gradient(rgba(255, 0, 0, 0.45),
-  rgba(255, 0, 0, 0.45))
-  background-image: url("http://img.photobucket.com/albums/0903/FelberMun/tumblr_mipjcsluFk1qimwd3o1_500.png");
+  rgba(255, 0, 0, 0.45)), url("http://img.photobucket.com/albums/0903/FelberMun/tumblr_mipjcsluFk1qimwd3o1_500.png");
   width: 600px;
   height: 200px;
   background-repeat: no-repeat;

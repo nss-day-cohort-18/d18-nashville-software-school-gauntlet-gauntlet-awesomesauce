@@ -1,4 +1,3 @@
-var Gauntlet = (function(OldGauntlet) {
 
   OldGauntlet.BattlePage = {};
 
@@ -28,3 +27,4 @@ return OldGauntlet;
 
 
 })(Gauntlet || {});
+var Gauntlet = (function(OldGauntlet) {

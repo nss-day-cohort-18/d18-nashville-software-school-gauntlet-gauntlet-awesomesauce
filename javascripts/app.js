@@ -49,8 +49,9 @@ $(document).ready(function() {
 //creates the randomize variable
     var random = Math.round(Math.random() * (combatantType.length-1));
     var randomCombatant = combatantType[random];
-    console.log("random", random);
-//randomizes the combatant
+    PlayerOne.playerName = $("#player-name").val();
+  })
+
 
 
 // ComputerEnemy =
@@ -58,15 +59,6 @@ $(document).ready(function() {
 //     ComputerEnemy = new Gauntlet.Combatants.Monster[randomCombatant]();
 //     ComputerEnemy.generateClass();
 
-//link random weapon function to Surprise Me Button
-    ComputerEnemy.setWeapon("Class-Surprise-Me");
-
-
-//Assignes Player One obj to player name element value, so that we can link to cards
-    PlayerOne.playerName = $("#player-name").val();
-  })
-
-//where player will choose a class and weapon
 
 /*
   TODO: Add event listeners to class select, weapon select, start battle, etc
@@ -74,28 +66,28 @@ $(document).ready(function() {
 
 $(".species-select").click(function(e) {
   $("#species-select").val($(this).closest("div").prop("id"));
-PlayerSpecies = $(this).closest("div").prop("id");
-PlayerOne.setSpecies(PlayerSpecies);
+  PlayerSpecies = $(this).closest("div").prop("id");
+  PlayerOne.setSpecies(PlayerSpecies);
 console.log("Add Class to Prototype", PlayerOne);
 
 })
 
 $(".class-select").click(function(e) {
   $("#class-select").val($(this).closest("div").prop("id"));
-PlayerClass = $(this).closest("div").prop("id");
-PlayerOne.setClass(PlayerClass);
+    PlayerClass = $(this).closest("div").prop("id");
+    PlayerOne.setClass(PlayerClass);
     console.log("Add Class to Prototype", PlayerOne);
 })
 
 $(".weapon-select").click(function(e) {
   $("#selected-player-weapon").val($(this).closest("div").prop("id"));
-PlayerWeapon = $(this).closest("div").prop("id");
-PlayerOne.setWeapon(PlayerWeapon);
+    PlayerWeapon = $(this).closest("div").prop("id");
+    PlayerOne.setWeapon(PlayerWeapon);
   console.log("Add Weapon to Prototype", PlayerOne)
 })
 
 $("#select-weapon").click(function(e) {
-  // PlayerOne.setClass(PlayerClass);
+  PlayerOne.setClass(PlayerClass);
   console.log("you clicked a weapon");
 })
 
@@ -163,11 +155,12 @@ $("#Start-battle-button").click(function(e) {
 
   $("#defeatYourEnemies").click(function() {
     $("#playerName").html(PlayerOne.playerName);
-    $("#playerclass").html(PlayerOne.class);
+    $("#playerclass").html(PlayerOne.species);
     $("#playerweapon").html(PlayerOne.weapon);
     $("#playerattack").html("STR : " + PlayerOne.strength);
     $("#playerhealth").html("Health : " + PlayerOne.health);
-
+    // $("#playerDamage").html("Damage : " + ComputerEnemy.damage);
+    
 
     ComputerEnemy = new Gauntlet.Combatants.Orc();
     ComputerEnemy.generateClass(ComputerEnemy);
@@ -180,12 +173,39 @@ $("#Start-battle-button").click(function(e) {
     $("#enemyClass").html(ComputerEnemy.class.name);
     $("#enemyWeapon").html(ComputerEnemy.weapon);
 // ADD STRENGTH WHEN FIXED
-    $("#enemyAttack").html("STR : ");
+    $("#enemyAttack").html("STR : " + ComputerEnemy.strength);
 
-    $("#enemyHealth").html("Health : " +ComputerEnemy.health);
-    $("#enemyDamage").html(ComputerEnemy.damage);
-  });
+    $("#enemyHealth").html("Health : " + ComputerEnemy.health);
+    $("#enemyDamage").html("Damage : " + ComputerEnemy.damage);
+    console.log("Computer Enemy Damage", computerEnemyDied);
+  // });
+  $("#attack-button").click(function() {
+        PlayerOne.health = (PlayerOne.health - ComputerEnemy.damage);
+        if (PlayerOne.health - ComputerEnemy.damage <= 0) {
+                playerOneDied();
+                console.log("Player One Died", playerOneDied);
+        }
+        $("#playerHealth").html("Health " + (PlayerOne.health - ComputerEnemy.damage));
+      //Player Two//
+        ComputerEnemy.health = (ComputerEnemy.health - PlayerOne.damage);
+        if (ComputerEnemy.health - PlayerOne.weapon.damage <= 0) {
+                computerEnemyDied();
 
+        }
+
+        $("#enemyHealth").html("Health " + (ComputerEnemy.health - PlayerOne.damage));
+   });
+
+
+  function  playerOneDied() {
+    GameOver = true;
+  }
+
+  function  computerEnemyDied() {
+      GameOver = true;
+  }
+
+});
 
 
 });

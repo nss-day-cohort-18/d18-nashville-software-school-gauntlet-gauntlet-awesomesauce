@@ -63,7 +63,7 @@ OldGauntlet.Combatants.Player.prototype.generateWeapon = function() {
   return this.weapon;
 }
 
-OldGauntlet.Combatants.Player.prototype.setClass = function(PlayerSpecies) {
+OldGauntlet.Combatants.Player.prototype.setClass = function(newClass) {
   if (newClass === "Class-Surprise-Me" || newClass === undefined) {
     this.class = PlayerOne.generateClass();
   }
